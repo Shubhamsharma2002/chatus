@@ -1,8 +1,8 @@
 module.exports.home = function(req,res){
-    return res.end('<h1>express is redy</h1>');
+    return res.render('home', {
+          title: "||HOME||",
+          
+    });
 }
 
 
-module.exports.p = function(req,res){
-    return res.end('<h1>ppxpress is redy</h1>');
-}
