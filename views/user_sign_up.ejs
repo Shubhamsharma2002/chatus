@@ -1,9 +1,12 @@
+<link rel="stylesheet" href="/css/user_signup.css">
+<div>
 <h1>||--SIGN UP--||</h1>
 
-<form action="/user/cretae" method="post">
-    <input type="text" placeholder="Enter Your name" required><br><br>
-    <input type="email" placeholder="Enter Your Email" required><br><br>
-    <input type="password" placeholder="Enter password " required><br><br>
-    <input type="cnf_password" placeholder="Renter password " required><br><br>
-    <input type="submit">
+<form action="/user/create" method="POST">
+    <input type="text"   name="name"  placeholder="Enter Your name" required><br><br>
+    <input type="email"  name="email" placeholder="Enter Your Email" required><br><br>
+    <input type="password" name="password" placeholder="Enter password " required><br><br>
+    <input type="password" name="cnf_password"placeholder="Renter password " required><br><br>
+    <input type="submit" value="Sign Up"><br><br>
 </form>
+</div>
