@@ -7,6 +7,7 @@ router.get('/profile', usercontroller.profile);
 router.get('/signin', usercontroller.sign_in);
 router.get('/signup', usercontroller.sign_up);
 router.post('/create', usercontroller.create);
+router.post('/create-sesion', usercontroller.createsesion);
 
 
 console.log(`router poaded ->>>>>>>>>>>`);
