@@ -1,0 +1,22 @@
+footer{
+    background-color: darkgrey;
+ 
+    padding: 15px;
+   
+   
+    #rowfoot{
+        display: flex;
+        justify-content: space-around;
+        height: 100px;
+        // margin-bottom: 0;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    li{
+        display: inline;
+        list-style: none;
+        margin-right: 10px;
+    }
+}

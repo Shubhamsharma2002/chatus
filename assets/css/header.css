@@ -1,0 +1,26 @@
+header {
+  overflow: hidden;
+}
+
+header #rowhead {
+  display: flex;
+  justify-content: space-between;
+  background-color: dodgerblue;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header #webname {
+  margin-left: 10px;
+}
+
+header ul {
+  list-style: none;
+}
+
+header li {
+  display: inline;
+  margin-right: 10px;
+}

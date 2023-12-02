@@ -1,0 +1,24 @@
+header{
+    overflow: hidden;
+#rowhead{
+    display: flex;
+    justify-content: space-between;
+    background-color: dodgerblue;
+    padding: 10px;
+    // position:sticky;
+    position: fixed;
+  top: 0;
+  width: 100%;
+}
+#webname{
+    margin-left: 10px;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+    margin-right: 10px;
+}
+
+}

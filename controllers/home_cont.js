@@ -1,9 +1,32 @@
+const Post = require('../models/post');
+
+
 module.exports.home = function(req,res){
-    console.log(req.cookies);
-    return res.render('home', {
-          title: "||HOME||",
-          
-    });
+    // console.log(req.cookies);
+    // Post.find({}, function(err, posts){
+    //     return res.render('home', {
+    //         title: "||HOME||",
+    //         posts : posts
+    //   });
+    // });
+   Post.find({})
+   .populate('user')
+   .populate({
+      // this is for display comments with user name
+          path:'comment',
+          populate:{
+            path:'user'
+          }
+   })
+
+   // this line display  the post which is store in database
+   .exec(function(err, posts){
+      
+         return res.render('home', {
+            title: "||HOME||",
+            posts : posts
+      });
+   });
 }
 
 
