@@ -1,0 +1,8 @@
+<li>
+    <% if (locals.user && locals.user.id == comment.user.id) {%>
+        <small><a href="/comments/destory/<%= comment.id %>">dll</a></small>
+        
+        <%} %>
+    <%= comment.content %>
+    <%= comment.user.name %>
+</li>

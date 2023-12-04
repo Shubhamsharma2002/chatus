@@ -2,3 +2,11 @@ body {
   text-align: center;
   background-color: deeppink;
 }
+
+body .profile {
+  width: 30%;
+  margin-left: 30%;
+  background-color: coral;
+  height: 100px;
+  border-radius: 10%;
+}

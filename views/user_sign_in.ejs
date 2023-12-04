@@ -1,14 +1,17 @@
 
-<!-- <link rel="stylesheet" href="/css/user_signin.css"> -->
+<link rel="stylesheet" href="/css/user_signin.css">
 
 
-<div>
-    <h1>||--SIGN IN--||</h1>
+    <div class="Sigin-div">
+    
+        <h1>||--SIGN IN--||</h1>
+    
+    <form action="/user/create-sesion" method="post">
+        <input type="email"    name="email" placeholder="Enter Your Email" required><br><br>
+        <input type="password"  name="password"   placeholder="Enter password " required><br><br>
+        <input type="submit" value="Sign In"> <br><br>
+    </form>
+    
+    
+    </div>
 
-<form action="/user/create-sesion" method="post">
-    <input type="email"    name="email" placeholder="Enter Your Email" required><br><br>
-    <input type="password"  name="password"   placeholder="Enter password " required><br><br>
-    <input type="submit" value="Sign In"> <br><br>
-</form>
-
-</div>

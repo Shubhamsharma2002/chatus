@@ -1,12 +1,12 @@
 footer {
   background-color: darkgrey;
-  padding: 15px;
 }
 
 footer #rowfoot {
   display: flex;
   justify-content: space-around;
   height: 100px;
+  margin-top: 70%;
 }
 
 footer a {

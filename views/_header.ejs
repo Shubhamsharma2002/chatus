@@ -9,7 +9,9 @@
 <div>
 <ul>
     <% if(locals.user){ %>
-              <li><%= user.name %></li>
+        <a href="/user/profile/<%= user.id %>">
+            <%= user.name %>
+          </a>
               <li>
                 <a href="/user/signout">Sign Out</a>
               </li>
