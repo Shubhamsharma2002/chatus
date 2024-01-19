@@ -10,6 +10,7 @@ module.exports.home = function(req,res){
     //   });
     // });
    Post.find({})
+   .sort('-createdAt')
    .populate('user')
    .populate({
       // this is for display comments with user name

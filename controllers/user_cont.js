@@ -67,12 +67,15 @@ module.exports.create = function(req,res){
 // for sin in
 
 module.exports.createsesion = function(req,res){
+     req.flash('success', 'Loged in successfully');
      return res.redirect('/');
      }
 
      module.exports.destroySession = function(req, res){
           req.logout(function(err) {
                if (err) { return next(err); }
+               req.flash('success', 'you have loged out!');
                res.redirect('/');
              });
+            
      }

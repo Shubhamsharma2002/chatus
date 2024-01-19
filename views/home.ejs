@@ -1,8 +1,13 @@
 <link rel="stylesheet" href="/css/home.css">
-
+     <div id="page-heading">
     <h1>chatus ->> <%= title %></h1>
+  </div>
     <div id="home-container">
+      <section id="explore">
+        <div>comig soon</div>
+       </section>
    <section id="feed-post">
+  
       <h4>Post</h4>
       <% if(locals.user){ %>
        <form action="/posts/create" id="new-post-form" method="POSt">
@@ -33,4 +38,8 @@
             
             <%} %>
    </section>
+
+   
   </div>
+
+  <script src="/js/home_posts.js"></script>
