@@ -4,7 +4,20 @@
   </div>
     <div id="home-container">
       <section id="explore">
-        <div>comig soon</div>
+        <div>
+
+          <% if(locals.user){ %>
+            <form action="/img/uploadimg" method="post"  enctype="multipart/form-data">
+              <input type="file" name="imgpost" placeholder="img"><br><br><br>
+              <!-- <input type="text" name="desc" placeholder="descriptinon"><br><br><br> -->
+              <input type="submit">
+          </form>
+          <% } else{ %>  
+            <h1>bar</h1>
+         <% } %>
+          
+          
+        </div>
        </section>
    <section id="feed-post">
   
@@ -14,6 +27,7 @@
         <textarea name="content"  cols="30" rows="10" placeholder="type something...." required></textarea>
         <input type="submit" >
        </form>
+       
        <% } %>
        <div id="posts-list-container">
                <ul>

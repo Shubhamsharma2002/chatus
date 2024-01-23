@@ -8,10 +8,12 @@ const db = require('./config/mongoose');
 const session = require('express-session');
 const paasport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+const parportJwt = require('./config/passport-jwt-strategy');
 const MongoStore = require('connect-mongo');
 const SaasMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash');
 const Cmidware = require('./config/midleware');
+const multer = require('multer');
 app.use(SaasMiddleware({
        src:'./assets/scss',
        dest: './assets/css',
@@ -23,6 +25,7 @@ app.use(SaasMiddleware({
 app.use(express.urlencoded());
 app.use(cookieparser());
 app.use(express.static('./assets'));
+app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(expresslayouts);
 // extract style and script tage
 app.set('layout extractStyles', true);
@@ -57,7 +60,7 @@ app.use(paasport.session());
 app.use(paasport.setAuthenticatedUser);
 app.use(flash());
 app.use(Cmidware.setflash);
-// use exprees router
+
 app.use('/', require('./routes'));
 app.listen(port, function(err){
     if(err){

@@ -1,4 +1,5 @@
 const Post = require('../models/post');
+// const PostImg = require('../models/postimg');
 const User = require('../models/user');
 
 module.exports.home = function(req,res){
@@ -36,5 +37,6 @@ module.exports.home = function(req,res){
          
    });
 }
+
 
 
