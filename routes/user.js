@@ -18,4 +18,6 @@ router.post('/create-sesion', paasport.authenticate(
 router.get('/signout', usercontroller.destroySession);
 console.log(`router poaded ->>>>>>>>>>>`);
 
+router.get('/auth/google', paasport.authenticate('google', {scope: ['profile', 'email']}));
+router.get('/auth/google/callback', paasport.authenticate('google', {failureRedirect:'/user/signin'}), usercontroller.createsesion);
 module.exports = router;
