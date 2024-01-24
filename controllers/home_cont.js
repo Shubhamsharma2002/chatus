@@ -13,13 +13,16 @@ module.exports.home = function(req,res){
    Post.find({})
    .sort('-createdAt')
    .populate('user')
-   .populate({
-      // this is for display comments with user name
-          path:'comment',
-          populate:{
-            path:'user'
-          }
-   })
+        .populate({
+            path: 'comments',
+            populate: {
+                path: 'user'
+            },
+            populate: {
+                path: 'likes'
+            }
+        }).populate('comments')
+        .populate('likes')
 
    // this line display  the post which is store in database
    .exec(function(err, posts){

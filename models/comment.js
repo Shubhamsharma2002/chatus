@@ -12,12 +12,12 @@ const commentSchema = new mongoose.Schema({
     ref:'User'
   }
   
-  // , likes : [
-  //   {
-  //     type:mongoose.Schema.Types.ObjectId,
-  //     ref:'Like'
-  //   }
-  // ]
+  , likes : [
+    {
+      type:mongoose.Schema.Types.ObjectId,
+      ref:'Like'
+    }
+  ]
 
 },{
     timestamps:true

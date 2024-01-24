@@ -1,7 +1,7 @@
 const Comment = require('../models/comment');
 const Post = require('../models/post');
 const commentmailer = require('../mailer/commentmaile');
-
+const Like = require('../models/like');
 module.exports.create = function(req, res){
     
     Post.findById(req.body.post, function(err, post){
@@ -72,7 +72,7 @@ module.exports.destory = function(req,res){
             if(comment.user == req.user.id){
                 let postId = comment.post;
                 comment.remove();
-
+                 Like.deleteMany({likeable: comment._id, onModel: 'Comment'});
                Post.findByIdAndUpdate(postId, {$pull : {comment:req.params.id}}, function(err, post){
                 return res.redirect('back');
                })

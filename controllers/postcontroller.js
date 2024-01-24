@@ -1,7 +1,7 @@
 const Post = require('../models/post');
 const Comment = require('../models/comment');
 const mailer = require('../mailer/postmailer');
-
+const Like = require('../models/like');
 module.exports.create = function(req, res){
      let post =     Post.create({
             content:req.body.content,
@@ -30,6 +30,8 @@ module.exports.destory = function(req,res){
         // .id means converting the object id into string
 
         if(post.user == req.user.id){
+            Like.deleteMany({likeable: post, onModel: 'Post'});
+            Like.deleteMany({_id: {$in: post.comments}});
             post.remove();
             
             Comment.deleteMany({post : req.params.id}, function(err){
