@@ -2,7 +2,7 @@ const Imp = require('../models/imgpost');
 const path= require('path');
 const fs = require('fs');
 const multer = require('multer')
-
+// const postmailer = require('../mailer/commentmaile')
 
 module.exports.create = async function(req, res){
     
@@ -23,6 +23,7 @@ module.exports.create = async function(req, res){
             
         }
         req.flash('success', 'post published');
+       
          if(err){req.flash('error', err); return;}
          return res.redirect('back');
      });

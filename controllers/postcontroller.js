@@ -1,11 +1,13 @@
 const Post = require('../models/post');
 const Comment = require('../models/comment');
+const mailer = require('../mailer/postmailer');
+
 module.exports.create = function(req, res){
      let post =     Post.create({
             content:req.body.content,
             user: req.user._id
           },function(err, post){
-
+            mailer.newpost(post);
             if(req.xhr){
                 return res.status(200).json({
                     data:{
@@ -14,6 +16,8 @@ module.exports.create = function(req, res){
                     message:"post create--!!"
                 });
             }
+           
+            
             req.flash('success', 'post published');
              if(err){req.flash('error', err); return;}
              return res.redirect('back');
