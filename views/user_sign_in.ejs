@@ -2,20 +2,38 @@
 <link rel="stylesheet" href="/css/user_signin.css">
 
 
-    <div class="Sigin-div">
+<div class="row">
+    <div class="login-img">
     
-        <h1>||--SIGN IN--||</h1>
+        <img src="/img/login.jpg" alt=""  class="img-b">
     
+    </div>
+    <div  class="form-div">  
+       
+            <h1>||USER--SIGN--||</h1>
+            <p>Fill Your Details For Login</p>
     <form action="/user/create-sesion" method="post">
-        <input type="email"    name="email" placeholder="Enter Your Email" required><br><br>
+        <label ><i class="fa-solid fa-envelope fa-2xl" style="color: #74C0FC;"></i></label>
+        <input type="email"    name="email" placeholder="Enter Your Email " required><br><br>
+        <label class="icon"><i class="fa-sharp fa-solid fa-unlock fa-2xl" style="color: #B197FC;"></i></label>
         <input type="password"  name="password"   placeholder="Enter password " required><br><br>
-        <input type="submit" value="Sign In"> <br><br>
+       
+        <i class="fa-solid fa-right-to-bracket fa-2xl" style="color: #B197FC;"></i>
+        <input type="submit" value="Sign In" class="b"> <br><br>
+      
     </form>
-    
-    
+
+        <h4>---Or Sing-in with-- </h4>
+    <div class="google-login">
+        <a href="/user/auth/google"> <i class="fa-brands fa-google" style="color: #008ffd;"></i> &nbsp;Google Sing-in </a>
+    </div>
+        <p>Don't have account?<a href="/user/signup">Sign-up</a></p>
     </div>
 
 
-    <p>
-        <a href="/user/auth/google">Google Sing-in /Up</a>
-    </p>
+</div>
+
+
+
+
+   

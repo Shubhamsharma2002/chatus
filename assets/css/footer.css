@@ -5,13 +5,15 @@ footer {
 footer #rowfoot {
   display: flex;
   justify-content: space-around;
-  height: 100px;
-  margin-top: 70%;
+  height: 70px;
+  margin-top: 30vh;
+  padding: 10px;
+  color: white;
 }
 
 footer a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 footer li {

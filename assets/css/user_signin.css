@@ -1,14 +1,75 @@
-.Sigin-div {
-  background-color: deeppink;
-  width: 20%;
-  margin-left: 40%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  border-radius: 15px;
+body {
+  background-color: #b270ef;
+  height: 80%;
 }
 
-form > input {
+body .row {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 80%;
+  border-radius: 20px;
+  margin-top: 4%;
+}
+
+body .login-img {
+  text-align: center;
+  width: 50%;
+  animation: hue-hue 5s infinite;
+}
+
+body .img-b {
+  border-radius: 25%;
+  width: 80%;
+  height: 80%;
+  margin-top: 8%;
+}
+
+@keyframes hue-hue {
+  50% {
+    transform: rotate(45deg);
+  }
+  20% {
+    background: #b270ef;
+    left: 200px;
+    top: 0px;
+    border-radius: 50%;
+  }
+}
+
+body .form-div {
+  margin-right: 30px;
+  width: 50%;
+}
+
+body h1, body h4 {
+  color: blueviolet;
+}
+
+body form > input {
   padding: 10px;
   border-radius: 5px;
+  border: 1px solid #B197FC;
+}
+
+body .b {
   border: none;
+  background-color: blueviolet;
+  color: white;
+  cursor: pointer;
+}
+
+body .google-login {
+  background-color: #7f5def;
+  padding: 10px;
+  width: 40%;
+  margin-left: 30%;
+  border-radius: 20px;
+}
+
+body .google-login > a {
+  text-decoration: none;
+  color: white;
 }

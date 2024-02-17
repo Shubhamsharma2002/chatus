@@ -1,16 +1,69 @@
 
 
-.row-signup{
-    background-color:deeppink;
-    width: 20%;
-    margin-left: 40%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    border-radius: 15px;
-}
 
-form > input{
+body{
+    background-color: rgb(209, 176, 241);
+    height: 80%;
+   
+
+    .row{
+          background-color: #fff;
+         display: flex;
+         justify-content: space-around;
+         margin-left: 10%;
+         margin-right: 10%;
+         height: 80%;
+         border-radius: 20px;
+         margin-top: 4%;
+    }
+    
+  .login-img{
+    text-align: center;
+    width: 50%;
+    animation: hue-hue 5s infinite;
+  }
+  .img-b{
+    border-radius: 25%;
+    width: 80%;
+    height: 80%;
+    margin-top: 8%;
+  }
+  @keyframes hue-hue {
+    50% {transform: rotate(45deg);}
+    20%  {background: rgb(57, 2, 109); left: 200px; top: 0px; border-radius: 50%;}
+   
+  }
+  .form-div{
+    margin-right: 30px;
+   
+    width: 50%;
+  }
+  h1,h4{
+    color: blueviolet;
+  }
+       
+  form > input{
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid #B197FC;;
+}
+.b{
     border: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    
+}
+.google-login{
+    background-color: #7f5def;
+    padding: 10px;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 20px;
+    
+}
+.google-login > a{
+    text-decoration: none;
+    color: white;
+}
 }

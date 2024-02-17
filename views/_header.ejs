@@ -1,33 +1,37 @@
 
-<header>
-   
-<div id="rowhead">
 
-<div id="webname">
-    <P>CHATUS</P>
-</div>
-<div>
-<ul>
-    <% if(locals.user){ %>
-        <a href="/user/profile/<%= user.id %>">
-            <%= user.name %>
-            
-          </a>
-          <!-- <a href="/user/profile/<%= user.id %>">
-            <img src="<%= user.avatar %>" alt="<%= user.name %>" width="100px">
-          </a> -->
-              <li>
-                <a href="/user/signout">Sign Out</a>
-              </li>
-        <% }else{ %>
-            <li>
-                <a href="/user/signin">Sigh in</a>
-            </li>
-            <li>
-                <a href="/user/signup">signup</a>
-            </li>
-            <% } %>
-</ul>
-</div>
-</div>
+<header>
+    <div class="nav">
+         <div class="logo"><a href="/"><img src="/img/logo.png" alt="" width="50px"></a></div>
+         <div class="data-nav">
+            <ul>
+                   <% if(locals.user){ %>
+
+                    <li>
+                        <a href="/user/profile/<%= user.id %>">
+                        <img src="<%= user.avatar %>" alt="<%= user.name %>"  class="pimg">
+                        </a>
+                    </li>
+
+                         <li> <a href="/user/profile/<%= user.id %>">
+                            <%= user.name %>
+                           
+                          </a></li>
+                        
+                         
+                               <li>
+                                 <a href="/user/signout">Sign Out</a>
+                           </li>
+                         <% }else{ %>
+                             <li>
+                                 <a href="/user/signin">Sigh in</a>
+                             </li>
+                             <li>
+                                 <a href="/user/signup">signup</a>
+                             </li>
+                             <% } %>
+                 </ul>
+        </div>
+    </div>
+    
 </header>

@@ -1,19 +1,13 @@
 header {
+  height: 60px;
+  background-color: #1669f0;
+  color: white;
   overflow: hidden;
 }
 
-header #rowhead {
-  display: flex;
-  justify-content: space-between;
-  background-color: dodgerblue;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-header #webname {
-  margin-left: 10px;
+header a {
+  text-decoration: none;
+  color: white;
 }
 
 header ul {
@@ -22,5 +16,26 @@ header ul {
 
 header li {
   display: inline;
-  margin-right: 10px;
+}
+
+header .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo {
+  margin-left: 10px;
+  cursor: pointer;
+  margin-bottom: 1px;
+}
+
+header .pimg {
+  border-radius: 30%;
+  height: 40px;
+}
+
+header .data-nav {
+  margin-right: 25px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
 }

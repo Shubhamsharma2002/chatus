@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/chatbox.css">
+
      <div id="page-heading">
     <h1>chatus ->> <%= title %></h1>
   </div>
@@ -51,9 +53,21 @@
             </p>
             
             <%} %>
+
+            <%- include('_chatbox') -%>
    </section>
 
    
   </div>
 
   <script src="/js/home_posts.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js" integrity="sha512-tE1z+95+lMCGwy+9PnKgUSIeHhvioC9lMlI7rLWU0Ps3XTdjRygLcy4mLuL0JAoK4TLdQEyP0yOl/9dMOqpH/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/chatengine.js"></script>
+
+<% if (locals.user){ %>
+  <script>
+      new ChatEngine('user-chat-box', '<%= locals.user.email %>')
+  </script>
+  <% } %>

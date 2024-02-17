@@ -1,24 +1,50 @@
 header{
+    height: 60px;
+    background-color: #1669f0;
+    color: white;
     overflow: hidden;
-#rowhead{
-    display: flex;
-    justify-content: space-between;
-    background-color: dodgerblue;
-    padding: 10px;
-    // position:sticky;
-    position: fixed;
-  top: 0;
-  width: 100%;
-}
-#webname{
-    margin-left: 10px;
-}
-ul{
-    list-style: none;
-}
-li{
-    display: inline;
-    margin-right: 10px;
-}
+  
+
+    a{
+        text-decoration: none;
+       color: white;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline;
+    }
+    .nav{
+        display: flex;
+        justify-content:space-between;
+          
+    }
+    .logo{
+        margin-left: 10px;
+        cursor: pointer;
+        // animation: hue-hue 5s infinite;
+        margin-bottom: 1px;
+    }
+//     @keyframes hue-hue {
+//     50% {transform: rotate(360deg);}
+//     25%  {background: #f809c4; left: 200px; top: 0px; border-radius: 50%;}
+   
+//   }
+  .pimg{
+    border-radius: 30%;
+    height: 40px
+    
+    
+  }
+    .data-nav{
+        margin-right: 25px;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
 
 }
+
+
+
+
